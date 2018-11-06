@@ -1,0 +1,24 @@
+{
+  "name": "hccbot",
+  "version": "0.0.1",
+  "description": "hcc mastodon bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harvestcore/hccbot.git"
+  },
+  "keywords": [
+    "mastodon",
+    "bot",
+    "js"
+  ],
+  "author": "Ángel Gómez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harvestcore/hccbot/issues"
+  },
+  "homepage": "https://github.com/harvestcore/hccbot#readme"
+}
