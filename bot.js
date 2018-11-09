@@ -10,14 +10,19 @@ const M = new Mastodon({
     api_url: 'https://botsin.space/api/v1/'
 });
 
+function postToot(params) {
+    M.post('statuses', params, (error, data) => {
+        if (error) {
+            console.error(error);
+        } else {
+            console.log(data);
+        }
+    });
+}
+
+
 const params = {
     status: 'howdy'
 };
 
-M.post('statuses', params, (error, data) => {
-    if (error) {
-        console.error(error);
-    } else {
-        console.log(data);
-    }
-});
+postToot(params);
