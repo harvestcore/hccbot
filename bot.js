@@ -1,6 +1,10 @@
 require('dotenv').config();
 const Mastodon = require('mastodon-api');
+const GitHub = require('github-api');
 
+const GH = new GitHub({
+    token: process.env.GITHUB_TOKEN
+});
 
 const M = new Mastodon({
     client_key: process.env.CLIENT_KEY,
@@ -9,6 +13,7 @@ const M = new Mastodon({
     timeout_ms: 60 * 1000,
     api_url: 'https://botsin.space/api/v1/'
 });
+
 
 function postToot(params) {
     M.post('statuses', params, (error, data) => {
@@ -22,7 +27,7 @@ function postToot(params) {
 
 
 const params = {
-    status: 'howdy'
+    status: 't'
 };
 
 postToot(params);
