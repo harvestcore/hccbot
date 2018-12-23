@@ -64,3 +64,7 @@ listener.on('message', msg => {
         }
     }
 });
+
+function checkPush() {
+    // check if user has pushed some commits
+}
